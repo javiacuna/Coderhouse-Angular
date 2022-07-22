@@ -1,0 +1,10 @@
+.col-12{
+    border-radius: 5px;
+    background-image: url(../assets/mar.jpeg);
+    height: 160px;
+}
+
+.col-10{
+    background-color: rgb(218, 215, 226); 
+    border-radius: 5px;
+}
