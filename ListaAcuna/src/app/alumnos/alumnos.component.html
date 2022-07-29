@@ -1,0 +1,23 @@
+<h1 class="display-1 text-center">{{titulo}}</h1>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Legajo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Nota de examen - {{ fechaExamen | date:"dd/MM/yyyy" }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let alumno of alumnos" class="col" 
+        [ngClass]="alumno.notaExamen < 4 ? 'bg-danger' : 'bg-success'">
+            <th>{{alumno.legajo}}</th>
+            <th>{{alumno.nombre}}</th>
+            <th>{{alumno.apellido}}</th>
+            <th>{{alumno.notaExamen}}</th>
+        </tr>
+        <br>
+    </tbody>
+</table>
+<h5 class="text-center">Se muestran en color <span style="color:green">VERDE</span> los alumnos aprobados</h5>
+<h5 class="text-center">Se muestran en color <span style="color:red">ROJO</span> los alumnos desaprobados</h5>
