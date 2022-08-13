@@ -7,7 +7,6 @@
     flex-direction: column;
     padding-left: 0;
     border-right: 0.5px solid black;
-    border-radius: 50px;
     padding-top: 10px;
 }
 
@@ -20,20 +19,9 @@
 }
 
 .links li{
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .sections li a{
     text-decoration: none;
-    color: rgb(15, 101, 172);   
-}
-
-.logo{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 1280px){
-    a, h4{font-size: 12px;}
 }

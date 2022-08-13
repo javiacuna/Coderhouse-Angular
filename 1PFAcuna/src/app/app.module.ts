@@ -9,6 +9,17 @@ import { AddDialogComponent } from './components/add-dialog/add-dialog.component
 import { EditDialogComponent } from './components/edit-dialog/edit-dialog.component';
 import { TransformPipe } from './pipes/transform.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontSizeDirective } from './directives/font-size.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,11 +29,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     AddDialogComponent,
     EditDialogComponent,
-    TransformPipe
+    TransformPipe,
+    FontSizeDirective
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

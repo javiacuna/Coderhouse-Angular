@@ -1,10 +1,15 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
   selector: '[appFontSize]'
 })
 export class FontSizeDirective {
+  @Input('appFontSize') fontSizeTitle! : string;
+  
+  constructor(private elemento: ElementRef) { }
 
-  constructor() { }
-
+  ngOnInit(): void {
+    this.elemento.nativeElement.style.fontSize = this.fontSizeTitle;
+  }
 }
+

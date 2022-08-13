@@ -5,8 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TransformPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any, ...args: any[]): string {
+    const nombreCompleto = value.nombre + ' ' + value.apellido
+    
+    return nombreCompleto;
   }
 
 }
