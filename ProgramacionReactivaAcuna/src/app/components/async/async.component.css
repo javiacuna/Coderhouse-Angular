@@ -1,0 +1,28 @@
+.example-card {
+    height: 260px;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+  
+  mat-grid-tile {
+    text-align: center;
+  }
+  
+  mat-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  mat-card-title {
+    color: blue;
+  }
+
+  .container{
+    background-color: antiquewhite;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
