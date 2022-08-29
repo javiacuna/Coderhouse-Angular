@@ -11,7 +11,7 @@ export interface Datos {
   providedIn: 'root'
 })
 export class ServiceService {
-  numeros: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  numeros: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   alumnos: Datos[] = [
     { nombre: 'Javier', edad: 30, email: 'javi@gmail.com' },
     { nombre: 'Juan', edad: 34, email: 'juan@gmail.com' },

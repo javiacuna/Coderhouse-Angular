@@ -5,7 +5,7 @@
           <mat-card-title>Datos obtenidos por observable</mat-card-title>
           <mat-card-content>
             <ul>
-              <li *ngFor="let dato of datos_observable">
+              <li *ngFor="let dato of alumnos$ | async">
                 <span>{{ dato.nombre }}</span>
               </li>
             </ul>
@@ -29,7 +29,7 @@
           <mat-card-title>Datos obtenidos por promesa</mat-card-title>
           <mat-card-content>
             <ul>
-              <li *ngFor="let dato of datos_promise">
+              <li *ngFor="let dato of alumnos$ | async">
                 <span>{{ dato.email }}</span>
               </li>
             </ul>
