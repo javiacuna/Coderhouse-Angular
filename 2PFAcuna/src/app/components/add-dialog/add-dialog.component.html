@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>Agregar Nuevo Alumno</h1>
+
+<div mat-dialog-content>
+    <form class="forms" [formGroup]="formulario">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input formControlName="nombre" matInput>
+        </mat-form-field>
+        <div *ngIf="(this.formulario.get('nombre')?.invalid && (this.formulario.get('nombre')?.dirty || this.formulario.get('nombre')?.touched))" class="alert alert-danger">
+            <span *ngIf="this.formulario.get('nombre')?.errors?.['required']">(Este campo es obligatorio)</span>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Apellido</mat-label>
+            <input formControlName="apellido" matInput>
+        </mat-form-field>
+        <div *ngIf="(this.formulario.get('apellido')?.invalid && (this.formulario.get('apellido')?.dirty || this.formulario.get('apellido')?.touched))" class="alert alert-danger">
+            <span *ngIf="this.formulario.get('apellido')?.errors?.['required']">(Este campo es obligatorio)</span>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" formControlName="email" matInput>
+        </mat-form-field>
+        <div *ngIf="(this.formulario.get('email')?.invalid && (this.formulario.get('email')?.dirty || this.formulario.get('email')?.touched))" class="alert alert-danger">
+            <span *ngIf="this.formulario.get('email')?.errors?.['required']">(Este campo es obligatorio)</span>
+            <span *ngIf="this.formulario.get('email')?.errors?.['email']">(Debe ser un email válido)</span>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Edad</mat-label>
+            <input type="number" formControlName="edad" matInput>
+        </mat-form-field>
+        <div *ngIf="(this.formulario.get('edad')?.invalid && (this.formulario.get('edad')?.dirty || this.formulario.get('edad')?.touched))" class="alert alert-danger">
+            <span *ngIf="this.formulario.get('edad')?.errors?.['required']">(Este campo es obligatorio)</span>
+        </div>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Curso</mat-label>
+            <input formControlName="curso" matInput>
+        </mat-form-field>
+        <div *ngIf="(this.formulario.get('curso')?.invalid && (this.formulario.get('curso')?.dirty || this.formulario.get('curso')?.touched))" class="alert alert-danger">
+            <span *ngIf="this.formulario.get('curso')?.errors?.['required']">(Este campo es obligatorio)</span>
+        </div>
+    </form>
+</div>
+<div class="buttons" mat-dialog-actions>
+    <button mat-raised-button (click)="add()">Agregar</button>
+    <button mat-raised-button (click)="close()">Cerrar</button>
+</div>

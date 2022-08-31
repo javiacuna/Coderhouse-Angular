@@ -1,0 +1,23 @@
+.table-layout{
+  display: flex;
+  justify-content: center;
+}
+  
+table {  
+  width: 70%;
+}
+  
+.button{
+  margin-right: 3px;
+  border-radius: 50px;
+}
+  
+.add{
+  display: flex;
+  justify-content: center ;
+  margin-top: 3%;
+}
+  
+.add button{
+  border: solid 1px black;
+}

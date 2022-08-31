@@ -1,0 +1,27 @@
+.sections{
+    height: 90%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 0;
+    border-right: 0.5px solid black;
+    padding-top: 10px;
+}
+
+.links{
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.links li{
+    padding-top: 30px;
+}
+
+.sections li a{
+    text-decoration: none;
+}

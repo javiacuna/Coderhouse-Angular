@@ -1,0 +1,29 @@
+.layout-center{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: 5% auto;
+    grid-template-areas: "bar bar"
+    "navbar table";
+}
+
+.toolbar{
+    grid-area: bar;
+}
+
+.navbar{
+    grid-area: navbar;
+    padding: 0;
+}
+
+.contents{
+    grid-area: table;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+
+@media (max-height: 840px){
+    .contents{
+        padding-top: 30px;
+    }
+}
